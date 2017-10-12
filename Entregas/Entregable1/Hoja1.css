@@ -1,0 +1,114 @@
+/*
+    Milagros del Rocío Peña Quineche 
+    Juan Gómez-Martinho González
+*/
+body{
+    font-family: arial;
+}
+
+p{
+    font-weight: normal;
+}
+
+a {  
+    text-align: center;
+}
+
+a:link{
+    color:deeppink;
+}
+
+a:visited{
+    color: darkgreen;
+}
+
+em{
+    color:blueviolet;
+}
+
+strong{
+    color: #75003c;
+}
+
+td {
+    padding: 0px 10px;
+}
+
+.cabecera {
+    text-align: center;
+    background-color: #ADD8E6;
+    border-radius: 32px 32px 32px 32px;
+    -moz-border-radius: 32px 32px 32px 32px;
+    -webkit-border-radius: 32px 32px 32px 32px;
+    padding: 1px;
+    margin: 10px;
+}
+
+
+h1{
+
+    color:blue;
+}
+
+h2 {
+    color: blue;
+}
+
+h4 {
+    color:#0040FF;
+    font-family: Calibri;
+    font-weight: lighter;
+}
+
+
+#cita {
+    font-style: italic;
+    font-weight:lighter;
+}
+
+table#tFI th{
+     text-align: right;
+     padding-bottom: .0em;
+}
+
+ul#numlist {
+  list-style-type: decimal;  
+}
+
+ts.spaceUnder>td{
+    padding-bottom: 0em;
+}
+
+table#pr {
+    border-collapse: collapse;
+}
+
+table#pr th, table#pr td{
+    border: 1px solid black;
+    padding: 3px 10px;
+    text-align: center;
+}
+td#hor{
+    background-color: #fff5b3;
+}
+th#dia{
+    background-color: #65270e;
+    color: white;
+    font-weight: bold;
+}
+td#cab{
+    background-color: #450021;
+    color: white;
+}
+td#ses{
+    background-color: #a5e4e8;
+}
+td#cent{
+    background-color: #feb971;
+}
+td#asam{
+    background-color: #eeb6ff;
+}
+h4#sub{
+    line-height: 0px;
+}
