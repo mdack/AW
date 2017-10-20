@@ -1,0 +1,71 @@
+
+<!-- Milagros del Rocío Peña Quineche -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Gestor de tareas</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="Hoja2.css"/>
+<link rel="stylesheet" href="MediaPrint.css" media="print"/>
+</head>
+
+<body>
+	<header id="main-header">
+		<div class="cab">
+            <div id="logo">
+		      <img id="fLogo" src="Logo.png">	
+            </div>
+			<div class="cPerfil">
+				<img id="fPerfil" src="NoPerfil.png">
+			</div>
+			<div class="cPerfil">
+				<p id="email">user@mail.com</p>
+				<nav><a id="desc" href="">Desconectar</a></nav>
+			</div>
+		</div>
+	</header>
+    
+    <ul class="tareas">
+        <li class="tarea">
+            <div class="tIzq">
+            <p id="nombT">Preparar práctica PDAP</p>
+            <p class="etiqueta">pdap</p>
+            <p class="etiqueta">practica</p>
+            </div>
+            <div class="tDr">
+                <nav><a id="finalizarT" href="">Marcar finalizada</a></nav>
+            </div>
+        </li>
+        <li class="tarea">
+            <p id="acabada">Mirar fechas congreso</p>
+        </li>
+        <li class="tarea">
+            <div class="tIzq">
+            <p id="nombT">Ir al supermercado</p>
+            <p class="etiqueta">personal</p>
+            </div>
+            <div class="tDr">
+            <nav><a id="finalizarT" href="">Marcar finalizada</a></nav>
+            </div>
+        </li>
+        <li class="tarea">
+            <div class="tIzq">
+            <p id="nombT">Mudanza</p>
+            <p class="etiqueta">personal</p>
+            </div>
+            <div class="tDr">
+            <nav><a id="finalizarT" href="">Marcar finalizada</a></nav>
+            </div>
+        </li>
+         <form method="post" action="entrega2.html">
+            <input type="text" name="tarea" id="text_tarea">
+            <input type="button" value="Añadir" id="bAnadir">
+        </form>
+        
+        <nav id="enlace_eliminar"><a id="eliminarT" href="">Eliminar tareas completadas</a></nav>
+    </ul>
+
+</body>
+
+</html>

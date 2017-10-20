@@ -1,0 +1,168 @@
+/*
+    Milagros del Rocío Peña Quineche 
+*/
+
+/*
+* Cabecera
+*/
+#main-header {
+    background: linear-gradient(to top, #04280C , #0E7725);
+}
+
+#logo{
+    margin-right: auto;
+}
+
+#fLogo {
+    width: 400px;
+    height: 100px;
+}
+
+#main-header .cab {
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+div.cPerfil {
+	font-family: arial;
+	text-align: center;
+    padding: 15px;
+}
+
+#fPerfil {
+	border-style: solid;
+    width: 90px;
+    height: 80px;    
+}
+
+#email {
+	color: #FFFFFF;
+}
+
+#desc {
+    font-weight: bold;
+	background-color: #D8990A;
+	border-radius: 6px 6px 6px 6px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+#desc:hover{
+    background: #EEBD36;
+}
+
+/*
+* Tareas
+*/
+
+ul.tareas{
+    font-weight: bold;
+    width: 700px;
+    margin: 40px auto;
+}
+
+li.tarea{
+    font-family: arial;
+    display: grid;
+    border-style: solid;
+    border-color: #CDBD85;
+    background-color: #FDE8B1;
+    grid-template-columns: 500px 200px;
+    margin-bottom: 3px;
+}
+
+.tIzq{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tIzq p{
+    margin: auto 2px;
+    padding: 1px 5px;
+}
+
+.tDr{
+    margin: 3px 10px;
+}
+
+.tDr nav{
+    padding: 5px;
+    padding-right: 5px;
+    padding-left: 30px;
+    background: url(tick.gif) no-repeat;
+    background-position: 5% 40%;
+    background-color: #523A1D;
+    border-radius: 6px 6px 6px 6px;
+    margin: 0px 5px;
+}
+
+.tDr nav:hover{
+    background-color: burlywood;
+}
+#acabada{
+    margin: 7px;
+    color:#CDBD85;
+    text-decoration: line-through;
+}
+
+
+.etiqueta{
+    color: white;
+    background-color: #D8990A;
+    border-radius: 16px 16px 16px 16px;
+}
+
+#finalizarT{
+    color: white;
+    font-family: arial;
+    text-decoration: none;
+}
+
+/*
+* Formulario
+*/
+
+form{
+    border-style: solid;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 610px 70px;
+    grid-column-gap: 5px;
+    background: #C7FAC3;
+    border-color: #568E56;
+}
+
+#bAnadir{
+    border-style: none;
+    background-color: #0B512D;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    border-radius: 6px 6px 6px 6px;
+}
+
+/*
+* Botón eliminar todo
+*/
+
+#eliminarT{
+    font-family: arial;
+    font-weight: bold;
+	background-color: #D8990A;
+	border-radius: 6px 6px 6px 6px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+}
+
+#eliminarT:hover{
+    background: #EEBD36;
+}
+
+#enlace_eliminar{
+    margin: 30px 230px;
+}
