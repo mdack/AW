@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Preguntas - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+        
+<body background=img\Fondo.jpg>
+    <%- include("header") %>
+    <div class="seccion">
+        <div id="title">
+            <h1 id="sectionTitle"></h1>
+        </div>
+    </div>
+    
+    <div id="title">
+        <h1 id="sectionTitle"><%= questEnun %></h1>
+    </div>
+    <div class="seccion">
+
+            <% if(!answered){ %>
+                <p class="texto">No has contestado a esta pregunta</p>
+                <nav><a class="button_left" href="question.html">Constestar pregunta</a></nav>
+            <% }else{ %>
+                <p class="texto">Ya has contestado a esta pregunta</p>
+            <% } %>
+
+    </div>
+</body>
+
+</html>

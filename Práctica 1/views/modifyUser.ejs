@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Modificar usuario - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+<body background=img\Fondo.jpg>
+    
+    <%- include("header") %>
+
+    <div id="title">
+        <h1 id="sectionTitle">Modificar Usuario</h1>
+    </div>
+    
+    <div class="principal"> 
+        <form class="form_ingreso" method="post" action="/user/modifyUser" enctype="multipart/form-data">
+            <div >
+               <label> Email</label>
+                <input type="email" name="lEmail" value="<%= usuario.email %>">
+                <% if (errores.lEmail) { %>
+                    <span class="negro">
+                        <%= errores.lEmail.msg %>
+                    </span>
+                <% } %>
+            </div>
+            <div>
+                 <label>Contraseña</label> <input type=password name="lPassword" value="<%= usuario.password %>">
+                 <% if (errores.lPassword) { %>
+                    <span class="negro">
+                        <%= errores.lPassword.msg %>
+                    </span>
+                <% } %>
+            </div>
+             <div>
+                 <label>Nombre completo</label> <input name="lName" value="<%= usuario.name %>">
+                 <% if (errores.lName) { %>
+                    <span class="negro">
+                        <%= errores.lName.msg %>
+                    </span>
+                <% } %>
+            </div>
+             <div>
+                 <label>Sexo</label> 
+                     <div id="check">  
+                         <div>
+                            <% if(usuario.gender === "masculino") { %>
+                                <input type="radio" name="sexo" value="masculino" checked>
+                            <% } else{ %>
+                                <input type="radio" name="sexo" value="masculino">
+                            <% } %>
+                         
+                         <label for="sexo1">Masculino</label>
+                             </div>
+                         <div>
+                                <% if(usuario.gender === "femenino") { %>
+                                    <input type="radio" name="sexo" value="femenino" checked>
+                                <% } else{ %>
+                                    <input type="radio" name="sexo" value="femenino">
+                                <% } %>
+                         <label for="sexo2">Femenino</label>
+                             </div>
+                         <div>
+                                <% if(usuario.gender === "otro") { %>
+                                    <input type="radio" name="sexo" value="otro" checked>
+                                <% } else{ %>
+                                    <input type="radio" name="sexo" value="otro">
+                                <% } %>
+                         <label for="sexo3">Otro</label>
+                             </div>
+                    </div>
+                    <% if (errores.sexo) { %>
+                        <span class="negro">
+                            <%= errores.sexo.msg %>
+                        </span>
+                    <% } %>
+            </div>
+            <div>
+                 <label>Fecha de nacimiento</label> <input type=date name="lDate" value="<%= usuario.dob %>">
+            </div>
+            <div>
+                <label>Cambiar imagen de perfil</label>
+                <div id="check">
+                    <div>
+                        <input type="radio" name="modify_img" value="si">
+                        <label for="modify_img1">Sí</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="modify_img" value="no">
+                        <label for="modify_img2">No</label>
+                    </div>
+                </div>
+                <% if (errores.modify_img) { %>
+                    <span class="negro">
+                        <%= errores.modify_img.msg %>
+                    </span>
+                <% } %>
+            </div>
+            <div>
+                <label>Imagen de Perfil</label> 
+                <input type="file" name="lProfP" accept="image/*">
+            </div>
+            
+            <input id="bConectar" type="submit" value="Modificar Usuario">
+        </form>
+    </div>
+
+    <% if (msg !== null) { %>
+        <div class="error">
+            <%= msg %>
+        </div>
+        <% } %>
+   
+</body>
+
+</html>

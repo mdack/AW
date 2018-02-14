@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Responder - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+        
+<body background=img\Fondo.jpg>
+    <%- include("header") %>
+
+    <div class="seccion">
+        <div id="title">
+            <h1 id="sectionTitle"><%= questEnun %></h1>
+        </div>
+
+        <form method="POST" action="/questions/answerQuestion">
+        <ul>
+            <% questions.forEach(q => { %>
+            <li class="question">
+                <input type="radio" name="answer" value="<%= q.id_answer %>" id= "checkQ">
+                <%= q.answer %>
+            </li>
+            <% }) %>
+            <li class="question">
+                <input type="radio" name="answer" value="otra" id="checkQ">
+                Otra:
+                <input type="text" name="other_answer">
+            </li>
+        </ul>
+        <input type="submit" id="bBuscar" value="Responder">
+        </form>
+    </div>
+
+    <% if (msg !== null) { %>
+        <div class="error">
+            <%= msg %>
+        </div>
+    <% } %>
+    
+</body>
+
+</html>

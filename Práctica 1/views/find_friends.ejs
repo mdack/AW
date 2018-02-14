@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Busqueda - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+    <body background=img\Fondo.jpg> 
+        
+        <%- include("header") %>
+        <div class="seccion">
+            <div id="title">
+                <h1 id="sectionTitle">Resultados de búsqueda:'<%= cadena %>'</h1>
+            </div>
+            
+            <ul>
+            <% busqueda.forEach(f => { %>
+                <li id="busquedas">
+                    <img src="/user/imagen/<%= f.id %>" class="usuario">
+                    <p class="friend_name"><%= f.name %></p>
+                    <a href="/user/addFriend/<%= f.id %>" class="bNormal">Solicitar amistad</a>
+
+                 </li>
+            <% }); %>
+            </ul>
+        </div>
+    </body>
+            
+</html>

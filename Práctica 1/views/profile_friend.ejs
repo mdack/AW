@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Perfil - FaceBluff</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+<body background=img\Fondo.jpg>
+
+    <%- include("header") %>
+    
+    <div id="title">
+        <h1 id="sectionTitle">Perfil de <%= usuario.nombre %></h1>
+    </div>
+    
+    <%- include("info_profile") %>
+    
+    <form method="post" action="/user/friendPhotos">
+            <input type="hidden" name="id_friend" value="<%= usuario.id %>">
+            <input type="hidden" name="name" value="<%= usuario.nombre %>">
+            <input type="submit" value="Ver Fotos" class="button_center"> 
+    </form>
+</body>
+
+</html>

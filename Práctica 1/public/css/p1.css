@@ -1,0 +1,366 @@
+﻿/*
+Juan Gómez-Martinho
+Milagros del Rocío Peña
+*/
+
+/*
+* Cabecera
+*/
+#log {
+    width:100%;
+    text-align:center;
+}
+
+body {
+    background-image: url("../img/Fondo.jpg");
+    background-color: #cccccc;
+    text-align: center;
+}
+
+#logo{
+    width: 400px;
+    height: 100px;
+    border-radius: 6px 6px 6px 6px;
+}
+@font-face {
+    font-family: 'FaceBluff'; 
+    src: url(../fonts/GloriaHallelujah.ttf); 
+    
+}
+.button{
+    font-family: 'FaceBluff';
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 18px 9px 18px 9px;
+    text-decoration: none;
+    border: 3px solid white;
+    color: white;
+    margin: 5px;
+}
+
+#puntos{
+    font-family: 'FaceBluff';
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 45px;
+    border-radius: 18px 9px 18px 9px;
+    text-decoration: none;
+    border: 3px solid white;
+    color: white;
+    margin: 5px;
+}
+#buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#buttons_Perfil{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#sectionTitle {
+    font-family: FaceBluff;
+    color: black;
+}
+
+.principal{
+    color:white;
+    font-family: FaceBluff;
+    background-color: blueviolet;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 50px 10px 50px 10px;
+    width: 60%;
+}
+
+h1{
+    text-align: center;
+}
+#title{
+    margin-top: 50px;
+}
+
+/* Login y registro de usuario */
+.form_ingreso{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_ingreso div{
+    margin: 5px;
+}
+
+.form_ingreso div label{
+    width: 25%;
+    float: left;
+    font-size: 100%;
+    text-align: left;
+}
+
+.form_ingreso div input{
+    width: 55%;
+    float: left;
+}
+
+#check{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+#check div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25px auto;
+    align-items: center;
+    padding: auto;
+    margin-top: -4px;
+    margin-bottom: -6px;
+    margin-left: 0px;
+}
+
+.negro{
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 100%;
+    margin-left: 2px;
+    float: left;
+    color: black;
+}
+
+#bConectar{
+    margin: 10px auto;
+    color:white;
+    border: none;
+    background-color:hotpink;
+    border-radius: 6px 6px 6px 6px;
+    font-family: FaceBluff;
+    font-size: 20px;
+}
+
+.button_center{
+    margin: 10px auto;
+    padding: 5px 20px;
+    color:white;
+    border: none;
+    background-color:rgb(210, 57, 230);
+    border-radius: 6px 6px 6px 6px;
+    font-family: FaceBluff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#fLogo {
+    width: 400px;
+    height: 100px;
+}
+
+#main-header .cab {
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+div.cPerfil {
+	font-family: arial;
+	text-align: center;
+    padding: 15px;
+}
+
+#fPerfil {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;    
+}
+
+#nombre{
+    font-family: FaceBluff;    
+    font-size: 20px;
+}
+
+#datos_perfil{
+    margin-left: 50px;
+    font-family: calibri;
+    font-size: 15px;
+    text-align: left;
+}
+
+#img_principal{
+    border: solid;
+    width: 200px;
+    height: 200px;
+}
+
+#principal_Perfil{
+    display: flex;
+    justify-content:center;
+    margin: 50px auto;
+}
+
+/* Secciones Amigos */
+.seccion{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.text{
+    width: 63%;
+    margin-left: 5px;
+    margin-right: 17px;
+}
+
+textarea{
+    width: 55%;
+    float: left;
+}
+
+.usuario{
+    border: solid;
+    color: black;
+    width: 50px; 
+    height: 50px;
+}
+
+#busqueda{
+    padding: 0 115px;
+    text-align: left;
+}
+
+#busquedas{
+    padding: 0 115px;
+    list-style: none;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 60px 500px 200px;
+}
+
+#peticiones{
+    list-style: none;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 60px 500px 100px 100px;
+    padding: 0 115px;
+    margin-bottom: 0px;
+}
+
+.friend_name{
+    margin-left: 10px;
+    font-family: calibri;
+    font-size: 16px;
+}
+
+#amigos{
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    padding: 0 115px;
+    margin-bottom: 0px;
+}
+
+.bNormal{
+margin: 10px auto;
+color:white;
+border: none;
+background-color: rgb(210, 57, 230);
+text-decoration: none;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 6px 6px 6px 6px;
+font-family: FaceBluff;
+font-size: 20px;
+}
+
+#bBuscar{
+    margin: 10px auto;
+    color:white;
+    border: none;
+    background-color:rgb(210, 57, 230);
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px 6px 6px 6px;
+    font-family: FaceBluff;
+    font-size: 20px;
+}
+
+/* Pregunta y respuestas */
+#checkboxes label {
+    float: left;
+  }
+#checkboxes ul {
+    margin: 0;
+    list-style: none;
+    float: left;
+}
+
+.question{
+    list-style: none;
+    background-color: rgb(235, 197, 157);
+    text-align: left;
+    width: 80%;    
+    float: center;
+    padding: 10px 0;
+    margin: 5px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.question a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(187, 5, 175);
+    padding: 3px 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#checkQ{
+    margin-left: 20px;
+}
+
+.button_left{
+    float: left;
+    padding: 5px 20px;
+    color:white;
+    border: none;
+    background-color:rgb(210, 57, 230);
+    border-radius: 6px 6px 6px 6px;
+    font-family: FaceBluff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Otros */
+.error{
+    font-family: arial;
+    text-align: center;
+    color: #3E15E2;
+    margin: 10px auto;
+}
+
+label{
+    font-family: calibri;
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+}
+
+#photos{
+    width: 500px;
+}
+#descr{
+	margin: 10px;
+	color: white;
+	font-weight: bold;
+}
+#descrCell{
+	background-color: DarkOrchid;	
+}

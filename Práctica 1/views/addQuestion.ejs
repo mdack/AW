@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Registrarse - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+<body background=img\Fondo.jpg>
+    
+    <%- include("header") %>
+
+    <div id="title">
+        <h1 id="sectionTitle">Nueva pregunta</h1>
+    </div>
+    
+    <div class="principal"> 
+        <form class="form_ingreso" method="post" action="/questions/addQuestion">
+             <div>
+                 <label>Enunciado</label> <input name="lEnunciado">
+                 <% if (errores.lEnunciado) { %>
+                    <span class="negro">
+                        <%= errores.lEnunciado.msg %>
+                    </span>
+                <% } %>
+            </div>
+            <div>
+                <label>Opciones</label>
+                <textarea name="opciones">Intoduce aquí las opciones, una por cada línea...</textarea>
+                <% if (errores.opciones) { %>
+                    <span class="negro">
+                        <%= errores.opciones.msg %>
+                    </span>
+                <% } %>
+            </div>
+            
+            <input id="bConectar" type="submit" value="Crear pregunta">
+        </form>
+
+
+    </div>
+
+    <% if (msg !== null) { %>
+        <div class="error">
+            <%= msg %>
+        </div>
+    <% } %>
+   
+</body>
+
+</html>

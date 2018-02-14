@@ -1,0 +1,17 @@
+<div id="principal_Perfil"> 
+    <div>
+      <img src="/user/imagen/<%= usuario.id %>" id="img_principal"> 
+    </div>
+    <div id="datos_perfil">
+          <p id="nombre"><%= usuario.nombre %></p>
+          <p><%= usuario.edad %> años</p>
+          <% if(usuario.sexo === "femenino"){ %>
+              <p>Mujer</p>
+          <% } else if(usuario.sexo === "masculino") { %>
+              <p>Hombre</p>
+          <% } else { %>
+              <p>Otro</p>
+          <% } %>
+          <p><%= usuario.puntos %> Puntos</p>
+    </div>
+</div>

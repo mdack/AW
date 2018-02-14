@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Amigos - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+<body background=img\Fondo.jpg>
+
+    <%- include("header") %>
+        
+        <div class="seccion">
+            <div id="title">
+                <h1 id="sectionTitle">Solicitudes de amistad</h1>
+            </div>
+            
+            <ul>
+                <% solicitudes.forEach(f => { %>
+                    <li id="peticiones">
+                        <form method="post" action="/user/profile_friend">
+                            <input type="hidden" name="id_friend" value="<%= f.id %>">
+                            <input type="image" src="/user/imagen/<%= f.id %>" class="usuario"> 
+                        </form>
+                        <p class="friend_name"><%= f.name %></p>
+                        <a href="/user/acceptFriend/<%= f.id %>" class="bNormal">Aceptar</a>
+                        <a href="/user/refuseFriend/<%= f.id %>" class="bNormal">Rechazar</a>
+                     </li>
+                <% }); %>
+            </ul>
+        </div>
+        
+        <div class="seccion">
+            <div id="title">
+                <h1 id="sectionTitle">Búsqueda de amigos</h1>
+            </div>
+            
+            <form id="busqueda" method="get" action="/user/findFriend">
+                <label>Buscar por nombre: </label>
+                <input type="text" name="fName" class="text">
+                <input type="submit" value="Buscar" id="bBuscar">
+            </form>
+            
+        </div>
+        
+        
+        <div class="seccion">
+            <div id="title">
+                <h1 id="sectionTitle">Mis amigos</h1>
+            </div>
+            
+            <ul>
+                <% friends.forEach(f =>{ %>
+                <li id="amigos">
+                    <form method="post" action="/user/profile_friend">
+                        <input type="hidden" name="id_friend" value="<%= f.id %>">
+                        <input type="image" src="/user/imagen/<%= f.id %>" class="usuario"> 
+                    </form>
+                    <p class="friend_name"><%= f.name %></p>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+    </body>
+    
+</html>

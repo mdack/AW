@@ -1,0 +1,88 @@
+
+<!--  -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Registrarse - FaceBluff</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/p1.css"/>
+</head>
+
+<body background=img\Fondo.jpg>
+    
+	<header id="main-header">
+        <div id="log"><img id="logo" src="img\Logo.png"></div>
+        <div id="buttons">
+              <nav><a class="button" href="/">Entrar</a></nav>
+              <nav><a class="button" href="">Nuevo Usuario</a></nav>
+        </div>
+	</header>
+    <div id="title">
+        <h1 id="sectionTitle">Nuevo usuario</h1>
+    </div>
+    
+    <div class="principal"> 
+        <form class="form_ingreso" method="post" action="/user/addUser" enctype="multipart/form-data">
+            <div >
+                <label> Email</label>
+                <input type="email" name="lEmail">
+                <% if (errores.lEmail) { %>
+                    <span class="negro">
+                        <%= errores.lEmail.msg %>
+                    </span>
+                <% } %>
+            </div>
+            <div>
+                 <label>Contraseña</label> <input type=password name="lPassword">
+                 <% if (errores.lPassword) { %>
+                    <span class="negro">
+                        <%= errores.lPassword.msg %>
+                    </span>
+                <% } %>
+            </div>
+             <div>
+                 <label>Nombre completo</label> <input name="lName">
+                 <% if (errores.lName) { %>
+                    <span class="negro">
+                        <%= errores.lName.msg %>
+                    </span>
+                <% } %>
+            </div>
+             <div>
+                 <label>Sexo</label> 
+                     <div id="check">  
+                         <div>
+                         <input type="radio" name="sexo" value="masculino">
+                         <label for="sexo1">Masculino</label>
+                             </div>
+                         <div>
+                         <input type="radio" name="sexo" value="femenino">
+                         <label for="sexo2">Femenino</label>
+                             </div>
+                         <div>
+                         <input type="radio" name="sexo" value="otro">
+                         <label for="sexo3">Otro</label>
+                             </div>
+                    </div>
+            </div>
+            <div>
+                 <label>Fecha de nacimiento</label> <input type="date" name="lDate" step="1">
+            </div>
+            <div>
+                 <label>Imagen de Perfil</label> <input type="file" name="lProfP" accept="image/*">
+            </div>
+            
+            <input id="bConectar" type="submit" value="Crear Usuario">
+        </form>
+    </div>
+
+    <% if (msg !== null) { %>
+        <div class="error">
+            <%= msg %>
+        </div>
+        <% } %>
+   
+</body>
+
+</html>
