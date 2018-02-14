@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Mentirosos en la red</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand">Juego del mentiroso</span>
+        <div class="form-inline">
+            <span id="nick"></span>
+            <span class="btn btn-danger float-right" id="logout">Desconectar</span>
+        </div>
+    </nav>
+    <div id="welcome">
+    <div class="jumbotron">
+    <h4>¡Bienvenido!</h4>
+        <img id="portada" src="imagenes/ImagenPortada.jpg">
+    </div>
+
+            <div class="p-3 mb-2 bg-dark text-white container">
+              <p id="font_log">Identificarse</p>
+              <form>
+                    <div class="form-group">
+                      <label for="login">Nombre de usuario:</label>
+                      <input type="text" class="form-control" placeholder="Enter login name" name="user_name">
+                    </div>
+                    <div class="alert alert-danger error" id="login_error">
+                        <!-- Error-->
+                      </div>
+                    <div class="form-group">
+                      <label for="pwd">Contraseña:</label>
+                      <input type="password" class="form-control" placeholder="Enter password" name="user_pwd">
+                    </div>
+                    <div class="alert alert-danger error" id="pwd_error">
+                        <!-- Error-->
+                      </div>
+                    <div>
+                    <button type="submit" id="loginUser" class="btn btn-primary">Aceptar</button>
+                    <button type="submit" id="newUser" class="btn btn-outline-light">Nuevo usuario</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <div id="game">
+        <div class="container" id="tabs">
+            <ul class="nav nav-tabs" id="game_list" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active partida" id="principal" data-id="0" data-toggle="tab" href="#">Mis partidas</a>
+              </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="my_games" role="tabpanel">
+                <div class="container">
+                    <div class="container card">
+                        <h4>Crear una nueva partida</h4>
+                            <form class="input-group card-body">
+                                <input type="text" class="form-control" name="game_name" placeholder="Introduce aquí el nombre">
+                                <span class="input-group-btn">
+                                    <button id="newGame" class="btn btn-primary" type="button">Crear</button>
+                                </span>
+                            </form>
+                    </div>
+                    <div class="container card">
+                        <h4>Unirse a una partida existente</h4>
+                            <form class="input-group card-body">
+                                <input type="text" class="form-control" name="game_id" placeholder="Introduce aquí el identificador de la partida">
+                                <span class="input-group-btn">
+                                    <button id="findGame" class="btn btn-primary" type="button">Unirse</button>
+                                </span>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="view_game" role="tabpanel">
+                <div class="container" id="partidas">
+                    <div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title" id="game_title"><!-- Nombre de la partida --></h5>
+                        <div class="card-text" id="info_game"><!-- Información de la partida --></div>
+                        <a id="update_game" class="btn btn-primary" type="button">Actualizar partida</a>
+                        </div>
+                    </div>
+                    <div class="card" id="game_cards">
+                            <div class="card-header">Cartas en la mesa</div>
+                            <div class="card-body">
+                                <div id="board_cards">
+                                    <!-- Cartas en la mesa -->
+                                </div>
+                                <div id="last_move">
+
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card" id="user_cards">
+                            <div class="card-header">Tus cartas</div>
+                            <div class="card-body">
+                                <div class="container" id="cards_container">
+                                            <form id="select_cards">
+                                                <div class="row" id="your_cards">	
+                                                
+                                                </div>
+                                                <input type="text" id="value" class="form-control" placeholder="Valor de la carta inicial" name="value_card">
+                                                <input type="button" id="play_cards" class="btn btn-primary" name="action" value="Jugar cartas seleccionadas">
+                                                <input type="button" id="lier" class="btn btn-danger" name="lie" value="Mentiroso">
+                                                <p id="info_turn"></p>
+                                            </form>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                    <div>
+                    <div class="card" id="table_players">
+                        <div class="card-header">Jugadores</div>
+                        <div class="card-body">
+                        <table class="table" id="players">
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Nº. cartas</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tPlayers">
+                        <!-- Añadimos información de jugadores -->
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                    <div class="card" id="table_history" style="overflow-y: scroll; height:600px;">
+                        <div class="card-header">Historial</div>
+                        <div class="card-body">
+                        <table class="table" id="history">
+                            <thead>
+                                <tr>
+                                    <th>Evento - Hora</th>
+                                </tr>
+                            </thead>
+                        <tbody id="tHistory">
+                        <!-- Añadimos información del historial -->
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

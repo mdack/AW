@@ -1,0 +1,30 @@
+{
+  "name": "practica2-aw",
+  "version": "1.0.0",
+  "description": "Practica 2 de AW",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "private": true,
+  "keywords": [
+    "aplicaciones",
+    "web",
+    "practica 2"
+  ],
+  "author": "Juan Gómez-Martinho González y Milagros del Rocío Peña Quineche",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "express-validator": "^4.3.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}

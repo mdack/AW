@@ -1,0 +1,78 @@
+/*
+* General
+*/
+.container{
+    border-radius: 6px 6px 6px 6px;
+}
+
+#partidas{
+    display: grid;
+    grid-template-columns: 700px 200px;
+    grid-column-gap: 80px;
+}
+
+#nick{
+    color: white;
+    margin-right: 10px;
+}
+
+#table_players{
+    width: 18em;
+    height: 20em;
+}
+
+#table_history{
+    width: 18em;
+}
+
+#value{
+    margin-bottom: 10px;
+}
+
+/*
+* Bienvenida
+*/
+.jumbotron{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+}
+
+.card{
+    margin-top: 20px;
+}
+
+.cards{
+    background-color: bisque;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    margin-right: 3px;
+}
+
+#your_cards{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#board_cards{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#portada{
+    height: 200px;
+}
+
+#font_log{
+    font-size: 22px;
+}
+
+img{
+    height: 20%;
+}
